@@ -15,5 +15,6 @@
         restart_policy: always
         interactive: true
         tty: true
+        detach: true 
         ports:
           - "5000:5000"
