@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('', 'mydocker') {
-                        sh 'docker tag spe substobeme/spe_calculator:latest'
+                        sh 'docker tag spe_calculator substobeme/spe_calculator:latest'
                         sh 'docker push substobeme/spe_calculator:latest'
                     }
                 }
