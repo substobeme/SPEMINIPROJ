@@ -4,13 +4,13 @@ name: Deploy Scientific Calculator
   tasks:
     - name: Pull Docker Image from Docker Hub
       community.docker.docker_image:
-        name: "substobeme/SPE_calculator:latest"
+        name: "substobeme/spe_calculator:latest"
         source: pull
 
     - name: Run Docker Container
       community.docker.docker_container:
         name: scientific_calculator
-        image: "substobeme/SPE_calculator:latest"
+        image: "substobeme/spe_calculator:latest"
         state: started
         restart_policy: always
         ports:
