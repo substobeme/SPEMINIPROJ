@@ -1,4 +1,4 @@
-name: Deploy Scientific Calculator
+- name: Deploy Scientific Calculator
   hosts: localhost
   become: true
   tasks:
@@ -13,5 +13,7 @@ name: Deploy Scientific Calculator
         image: "substobeme/spe_calculator:latest"
         state: started
         restart_policy: always
+        interactive: true
+        tty: true
         ports:
           - "5000:5000"
