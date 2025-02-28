@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_IMAGE_NAME = 'SPE_calculator'
+        DOCKER_IMAGE_NAME = 'spe_calculator'
         GITHUB_REPO_URL = 'https://github.com/substobeme/SPEMINIPROJ.git'
     }
 
