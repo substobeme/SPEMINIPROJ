@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-            sh "sudo docker build -t ${DOCKER_IMAGE_NAME} ."
+            sh "docker build -t ${DOCKER_IMAGE_NAME} ."
               }
                 }
 
@@ -32,8 +32,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('', 'mydocker') {
-                        sh 'sudo docker tag scientific_calculator substobeme/spe_calculator:latest'
-                        sh 'sudo docker push substobeme/spe_calculator:latest'
+                        sh 'docker tag scientific_calculator substobeme/spe_calculator:latest'
+                        sh 'docker push substobeme/spe_calculator:latest'
                     }
                 }
             }
