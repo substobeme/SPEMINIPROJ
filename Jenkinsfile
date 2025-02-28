@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE_NAME = 'SPE_calculator'
         GITHUB_REPO_URL = 'https://github.com/substobeme/SPEMINIPROJ.git'
     }
-    
+
     stages {
         stage('Checkout') {
             steps {
