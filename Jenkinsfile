@@ -15,12 +15,17 @@ pipeline {
             }
         }
         
-        stage('Run Unit Tests') {
+          stage('Install Dependencies') {
             steps {
-                sh 'python -m unittest test_calculator.py'
+                sh 'python3 -m pip install --upgrade pip
             }
         }
         
+        stage('Run Unit Tests') {
+            steps {
+                sh 'python3 -m unittest test_cal.py'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 script {
