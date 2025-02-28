@@ -44,7 +44,7 @@ pipeline {
                 script {
                     ansiblePlaybook(
                         playbook: 'deploy.yml',
-                        inventory: 'inventory.ini'
+                        inventory: 'inventory.ini',
                         extraVars: [ ansible_python_interpreter: "/usr/bin/python3" ],
                         options: '--vvvv'  
                     )
