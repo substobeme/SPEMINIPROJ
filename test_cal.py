@@ -7,7 +7,7 @@ from cal import square_root, factorial, natural_log, power
 class TestCalculator(unittest.TestCase):
     
     def test_square_root(self):
-        self.assertEqual(square_root(16),4)
+        self.assertEqual(square_root(25),5)
         with self.assertRaises(ValueError):
             square_root(-1)
     
